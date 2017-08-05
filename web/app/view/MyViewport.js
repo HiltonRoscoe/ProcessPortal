@@ -908,9 +908,9 @@ function createCommentPanel()
                                                             result[0].contentTitle = document.getElementById('titleLabel').innerText;
                                                             result[0].comment = comment;
                                                             
-                                                            var orginDisclaimer = "*Generated from Process Portal* \r\n" +
-                                                            "Reference Url: "  + window.location.href +
-                                                            "\r\nReference Diagram: "  + result[0].contentTitle;
+                                                             var orginDisclaimer = "Reference Diagram: [" + result[0].contentTitle +
+                                                            "]("  +  window.location.href + ")\r\n" +
+                                                            "*Generated from Process Portal*";
                                                             
                                                             var constructedString = "$WebComment" + "?title=" + summary + "&body=" + encodeURIComponent(comment + "\r\n" + orginDisclaimer);
                                                             
