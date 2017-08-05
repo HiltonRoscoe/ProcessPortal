@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+#set($indexFile = $template.outputFileName)
+#import("bpmn", "com.nomagic.reports.WebReportTool")
+#set($void = $bpmn.setIndexFileName($template.getOutputFile()))
+#set($void = $bpmn.setOutputLocation($template.getOutputLocation()))
+
+<html>    
+<head>
+    <LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>$Title</title>
+    <link   rel="stylesheet"       href="resources/ext-4.2.1/ext-theme-neptune/ext-theme-neptune-all-debug.css">
+    <link   rel="stylesheet"       href="css/style.css" id="style">
+    <link   rel="stylesheet"       href="css/treePanels.css" id="tree_style">
+    <script type="text/javascript" src="resources/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="resources/ext-4.2.1/ext-all-debug.js"></script>
+    <script type="text/javascript" src="resources/ext-4.2.1/ext-theme-neptune.js"></script>    
+    <script type="text/javascript" src="resource.js"></script>
+    <script type="text/javascript" src="help_data.js"></script>    
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    
+    #set($void = $file.copy('images'))
+    #set($void = $file.copy('resources'))
+    #set($void = $file.copy('css'))
+    #set($void = $file.copy('diagrams'))
+    #set($void = $file.copy('manuals'))
+    #set($void = $file.copy('favicon.ico'))
+    
+    #set($void = $file.create('data.js')) 
+    #set($void = $file.create('help_data.js'))
+    #set($void = $file.create('resource.js'))
+    #set($void = $file.create('app.js')) 
+    #set($void = $file.create('app/view/Viewport.js'))   
+    #set($void = $file.create('app/view/MyViewport.js'))   
+    
+</head>
+<body></body>
+</html>
